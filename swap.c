@@ -1,15 +1,15 @@
 #include "monty.h"
 
 /**
-  * f_swap - the function Swaps the top two elements of the stack.
-  * @head: the double pointer to the head of the stack.
-  * @counter: a line number for error reporting
-  * in case of usage errors.
-  * the function swaps the top two elements of the stack.
-  * If the stack contains less than two elements,
-  * it prints an error message
-  * and exits with a status of EXIT_FAILURE.
-  * Return: the function function does not return a value.
+ * f_swap - the function Swaps the top two elements of the stack.
+ * @head: the double pointer to the head of the stack.
+ * @counter: a line number for error reporting
+ * in case of usage errors.
+ * the function swaps the top two elements of the stack.
+ * If the stack contains less than two elements,
+ * it prints an error message
+ * and exits with a status of EXIT_FAILURE.
+ * Return: the function function does not return a value.
  */
 void f_swap(stack_t **head, unsigned int counter)
 {
@@ -37,5 +37,4 @@ void f_swap(stack_t **head, unsigned int counter)
 	temp_node->n = temp_node->next->n;
 	temp_node->next->n = temp_val;
 	swap_count++;
-	printf("Swap operation has been performed %d times.\n", swap_count);
 }
