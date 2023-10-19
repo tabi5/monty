@@ -29,33 +29,31 @@ void f_queue(stack_t **head, unsigned int counter)
  */
 void addqueue(stack_t **head, int n)
 {
-	int n_value = n;
-	stack_t *new_n, *aux_nod;
-	int node_value = n;
+	stack_t *new_node, *aux;
+	int new_var;
 
-
-	aux_nod = *head;
-	new_n = malloc(sizeof(stack_t));
-	if (new_n == NULL)
+	aux = *head;
+	new_node = malloc(sizeof(stack_t));
+	if (new_node == NULL)
 	{
-		printf("Error: Memory allocation failed\n");
-		return;
+		printf("Error\n");
 	}
-	new_n->n_value = node_value;
-	new_n->next = NULL;
-	if (aux_nod)
+	new_var = n;
+	new_node->n = new_var;
+	new_node->next = NULL;
+	if (aux)
 	{
-		while (aux_nod->next)
-			aux_nod = aux_nod->next;
+		while (aux->next)
+			aux = aux->next;
 	}
-	if (!aux_nod)
+	if (!aux)
 	{
-		*head = new_n;
-		new_n->prev = NULL;
+		*head = new_node;
+		new_node->prev = NULL;
 	}
 	else
 	{
-		aux_nod->next = new_n;
-		new_n->prev = aux_nod;
+		aux->next = new_node;
+		new_node->prev = aux;
 	}
 }
