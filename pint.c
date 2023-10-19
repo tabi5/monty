@@ -11,7 +11,7 @@ void f_pint(stack_t **head, unsigned int counter)
 {
 	stack_t *current_node;
 	unsigned int line_num = counter;
-	int top_val;
+	int top_value;
 
 	if (*head == NULL)
 	{
