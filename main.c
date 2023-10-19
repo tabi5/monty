@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_t bus = {NULL, NULL, NULL, 0};
 /**
  * main - the function serves as an interpreter
  * for Monty bytecodes.
@@ -30,7 +31,6 @@ int main(int argc, char *argv[])
 	ssize_t is_line_read = 1;
 	stack_t *stack_data = NULL;
 	unsigned int line_counter = 0;
-	bus_t bus = {NULL, NULL, NULL, 0};
 
 	if (argc != 2)
 	{

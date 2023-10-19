@@ -19,7 +19,7 @@ void f_stack(stack_t **head, unsigned int counter)
 
 	(void)head;
 	(void)line_number;
-	bus.lifo = 0;
+	bus.lifi = 0;
 	call_count++;
 	printf("f_stack function has been called %d times.\n", call_count);
 }
